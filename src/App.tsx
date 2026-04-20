@@ -16,6 +16,7 @@ type Dictionary = {
   badge: string
   heroTitle: string
   heroDescription: string
+  githubLink: string
   themeLabel: string
   languageLabel: string
   system: string
@@ -60,6 +61,7 @@ const dictionaries: Record<Language, Dictionary> = {
     badge: 'docker run → docker-compose',
     heroTitle: '一条命令，吐出 compose',
     heroDescription: 'Liquid Glass 风格纯前端工具。把常见 docker run 命令解析成 docker-compose / compose.yaml，支持实时预览、主题切换、示例库和多语言。',
+    githubLink: 'GitHub 仓库',
     themeLabel: '外观',
     languageLabel: '语言',
     system: '跟随系统',
@@ -102,6 +104,7 @@ const dictionaries: Record<Language, Dictionary> = {
     badge: 'docker run → docker-compose',
     heroTitle: 'One command in, compose out',
     heroDescription: 'A Liquid Glass front-end tool that turns common docker run commands into docker-compose / compose.yaml with live preview, theme switching, example presets, and multilingual UI.',
+    githubLink: 'View on GitHub',
     themeLabel: 'Appearance',
     languageLabel: 'Language',
     system: 'System',
@@ -367,6 +370,19 @@ function App() {
                 <p className="theme-text-secondary mt-3 max-w-3xl text-sm leading-7 sm:text-base">
                   {t.heroDescription}
                 </p>
+                <div className="mt-5 flex flex-wrap gap-3">
+                  <a
+                    href="https://github.com/sarices/RunToCompose"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="glass-button theme-text-primary inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition"
+                  >
+                    <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4 fill-current">
+                      <path d="M12 2C6.477 2 2 6.589 2 12.248c0 4.526 2.865 8.367 6.839 9.722.5.096.682-.222.682-.495 0-.244-.009-.89-.014-1.747-2.782.617-3.369-1.37-3.369-1.37-.455-1.177-1.11-1.49-1.11-1.49-.908-.637.069-.624.069-.624 1.004.072 1.532 1.053 1.532 1.053.892 1.565 2.341 1.113 2.91.851.091-.664.35-1.113.636-1.369-2.221-.259-4.555-1.137-4.555-5.062 0-1.118.389-2.032 1.029-2.748-.103-.259-.446-1.301.098-2.712 0 0 .84-.275 2.75 1.05A9.303 9.303 0 0 1 12 6.836a9.27 9.27 0 0 1 2.504.346c1.909-1.325 2.748-1.05 2.748-1.05.546 1.411.202 2.453.1 2.712.64.716 1.027 1.63 1.027 2.748 0 3.935-2.338 4.8-4.566 5.053.359.319.678.948.678 1.91 0 1.379-.013 2.49-.013 2.829 0 .275.18.595.688.494C19.138 20.611 22 16.772 22 12.248 22 6.589 17.523 2 12 2Z" />
+                    </svg>
+                    <span>{t.githubLink}</span>
+                  </a>
+                </div>
               </div>
 
               <div className="grid gap-3 sm:min-w-[16rem]">

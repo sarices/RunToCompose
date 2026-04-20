@@ -4,6 +4,14 @@
 
 RunToCompose is a pure front-end tool that converts common `docker run` commands into `docker-compose` / `compose.yaml` with live preview in the browser.
 
+## Deploy
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/sarices/RunToCompose&project-name=run-to-compose&repository-name=RunToCompose)
+
+## Screenshot
+
+![RunToCompose UI](./docs/run-to-compose-ui.png)
+
 ## Overview
 
 Paste a `docker run` command, and get clean Compose YAML immediately.
