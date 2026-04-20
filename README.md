@@ -38,24 +38,17 @@ Paste a `docker run` command, and get clean Compose YAML immediately.
 Input:
 
 ```bash
-docker run -d --name Freebuff2API \
-  -p 8080:8080 \
-  -e AUTH_TOKENS="***" \
-  ghcr.io/quorinex/freebuff2api:latest
+docker run --name hello-world-demo hello-world:latest
 ```
 
 Output:
 
 ```yaml
-name: freebuff2api-stack
+name: hello-world-demo-stack
 services:
-  freebuff2api:
-    image: ghcr.io/quorinex/freebuff2api:latest
-    container_name: Freebuff2API
-    ports:
-      - '8080:8080'
-    environment:
-      AUTH_TOKENS: token1,token2
+  hello-world-demo:
+    image: hello-world:latest
+    container_name: hello-world-demo
 ```
 
 ## Tech stack
